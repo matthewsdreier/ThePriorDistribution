@@ -22,6 +22,7 @@ header, footer {
     justify-content: right;
     align-items: center;
     gap: 20px;
+    min-width: 500px;
 }
 
 header img, footer img {
@@ -44,4 +45,16 @@ a {
     text-decoration: none;
     color: var(--dark_green);
     font-family: "Andale Mono Regular";
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    flex: 1 1 auto;
+}
+
+.graph img {
+    width: 500px;
 }
