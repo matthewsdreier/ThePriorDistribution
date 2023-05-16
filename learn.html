@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/Logo.png">
+    <title>Learn - The Prior Distribution</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">
+            <img src="./assets/Logo.png" alt="The Prior Distribution Logo">
+            <p class="title">The Prior Distribution</p>
+        </a>
+        <a href="./index.html">Graph</a>
+        <a href="./learn.html">Learn</a>
+        <a href="./about.html">About</a>
+    </header>
+    <div class="learn">
+        <h2>About the plots</h2>
+        <p><a href="./index.html">The Prior Distribution</a> is a web tool that creates graphs of posttest probability vs. pretest probability. These graphs have been called leaf plots, and can be used to evaluate the utility of a diagnostic test.<sup><a href="./citations.html">1</a></sup></p>
+
+        <h3>Leaf plots depend only on sensitivity and specifity</h3>
+        <p>When interpreting a diagnostic test result, the most useful quantity for the clinician is the positive or negative predictive value. This value represents the likelihood of the patient having or not having the diagnosis, based on the test result. However, positive and negative predictive value depend on pretest probability. When positive and negative predictive value are reported in the literature, they reflect the pretest probability of the population that was studied. These literature values cannot be applied to patients with different pretest probabilities. 
+        <br><br>
+        Leaf plots depend only on sensitivity and specificity. Because sensitivity and specificity are intrinsic characteristics of diagnostic tests, leaf plots are also intrinsic test characteristics. They can be used regardless of a patient's pretest probability, because the graphs include all the possible pretest probabilities!</p>
+
+        <h3>How to read a leaf plot</h3>
+        <p>Leaf plots contain two curves. One is the posttest probability vs. pretest probability for a positive test result (the upper curve) and one is the posttest probability vs. pretest probability for a negative test result (the lower curve). When a patient's pretest probability is precisely known, the curves will give the posttest probability for a positive or negative test result, respectively.
+        <br><br>
+        Sometimes, the pretest probability is not known. In this case, the shape of the leaf plot can give information about the utility of a test. Consider four different tests for pulmonary embolism (PE): CT pulmonary angiography (high sensitivity and high specificity),<sup><a href="./citations.html">2</a></sup> lower extremity venous doppler (high sensitivity but low specificity),<sup><a href="./citations.html">3</a></sup> findings of right heart strain on transthoracic echocardiography (low sensitivity but high specificity),<sup><a href="./citations.html">4</a></sup> and S1Q3T3 on electrocardiography (low sensitivity and low specificity).<sup><a href="./citations.html">5</a></sup> Leaf plots with "broad leaves" represent tests with high sensitivity and low specificity, such as CT pulmonary angiography for PE; these tests are highly useful in making diagnoses. Leaf plots with "narrow leaves" represent tests with low sensitivity and low specificity, such as S1Q3T3 on electrocardiography for PE; these tests are not useful in making diagnoses. Leaf plots with broad lower portions but narrow upper portions represent tests with high sensitivity but low specificity, such as lower extremity venous duplex; these tests are useful for ruling out diagnoses but not ruling them in. Finally, leaf plots with broad upper portions but narrow lower portions have high specificity but low sensitivity, such as findings of right heart strain on transthoracic echocardiography; these tests are useful for ruling in diagnoses but not useful for ruling them out. Examples of these four shapes are shown below.</p>
+        <div class="graphs1">
+            <div class="graph1"></div>
+            <div class="graph2"></div>
+        </div>
+        <div class="graphs2">
+            <div class="graph3"></div>
+            <div class="graph4"></div>
+        </div>
+
+        <h3>Limits of pretest probability</h3>
+        <p>Leaf plots are also useful in evaluating very high of very low pretest probabilities. As is demonstrated by every leaf plot, when pretest probability is very low, near 0, posttest probability is also low. When pretest probability is very high, near 1, posttest probability is also high. This is true for any test with sensitivity and specificity less than 1, which in real practice is all tests!</p>
+    </div>
+    <footer>
+        <a href="./about.html">Citations</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./index.html" class="logo">
+            <p class="title">The Prior Distribution</p>
+            <img src="./assets/Logo.png" alt="The Prior Distribution Logo">
+        </a>
+    </footer>
+</body>
+</html>
+
+<script src="https://cdn.plot.ly/plotly-2.20.0.min.js"></script>
