@@ -40,7 +40,7 @@ function makeGraph() {
     var ppv = {
         x: ppv_x,
         y: ppv_y,
-        name: "PPV",
+        name: "Test (+)",
         line: {
             color: "rgb(87, 188, 144)"
         }
@@ -49,7 +49,7 @@ function makeGraph() {
     var npv = {
         x: npv_x,
         y: npv_y,
-        name: "NPV",
+        name: "Test (-)",
         line: {
             color: "rgb(1, 82, 73)"
         }
