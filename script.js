@@ -1,30 +1,30 @@
 const graph = document.querySelector(".graph");
 const sn_input = document.querySelector("#sensitivity");
 const sp_input = document.querySelector("#specificity");
-var sp = 80;
-var sn = 80;
+var specificity = 80;
+var sensitivity = 80;
 
 sp_input.addEventListener("blur", function() {
     if (!this.value) {
-        sp = 80;
+        specificity = 80;
     } else {
-        sp = Number(this.value);
+        specificity = Number(this.value);
     }
-    makeGraph();
+    makeGraph(sn = sensitivity, sp = specificity);
 })
 
 sn_input.addEventListener("blur", function() {
     if (!this.value) {
-        sn = 80;
+        sensitivity = 80;
     } else {
-        sn = Number(this.value);
+        sensitivity = Number(this.value);
     }
-    makeGraph();
+    makeGraph(sn = sensitivity, sp = specificity);
 })
 
-makeGraph();
+makeGraph(sn = sensitivity, sp = specificity);
 
-function makeGraph() {
+function makeGraph(sn, sp) {
     var ppv_x = [];
     var npv_x = [];
     var ppv_y = [];
@@ -43,7 +43,7 @@ function makeGraph() {
         name: "Test (+)",
         line: {
             color: "rgb(87, 188, 144)",
-            shape: "spline"
+            shape: "line"
         }
     };
     
@@ -53,7 +53,7 @@ function makeGraph() {
         name: "Test (-)",
         line: {
             color: "rgb(1, 82, 73)",
-            shape: "spline"
+            shape: "line"
         }
     };
     
