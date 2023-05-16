@@ -18,13 +18,18 @@
         <a href="./about.html">About</a>
     </header>
     <div class="main">
-        <input type="text" class="name">
+        <input type="text" id="name" placeholder="Test Name">
         <div class="parameters">
-            <input type="text" class="sensitivity">
-            <input type="text" class="specificity">
+            <div class="sensitivity">
+                <label for="sensitivity">Sensitivity</label>
+                <input type="text" id="sensitivity" placeholder="80">
+            </div>
+            <div class="specificity">
+                <label for="specificity">Specificity</label>
+                <input type="text" id="specificity" placeholder="80">
+            </div>
         </div>
         <div class="graph">
-            <img src="./assets/Logo.png" alt="The Prior Distribution Logo">
         </div>
     </div>
     <footer>

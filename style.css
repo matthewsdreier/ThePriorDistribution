@@ -3,6 +3,7 @@
     --light_green: rgb(87, 188, 144);
     --dark_green: rgb(1, 82, 73);
     --blue: rgb(119, 201, 212);
+    --graph_width: 650px;
 }
 
 @font-face {
@@ -54,17 +55,60 @@ footer a.logo {
 a {
     text-decoration: none;
     color: var(--dark_green);
-    font-family: "Andale Mono Regular";
+    font-family: "Andale Mono Regular", Arial, sans-serif;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
     align-self: center;
     width: 100%;
 }
 
-.graph img {
-    width: 500px;
+.graph {
+    width: var(--graph_width);
+}
+
+.parameters {
+    width: var(--graph_width);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+label {
+    font-family: "Andale Mono Regular", Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    margin-right: 8px;
+}
+
+input {
+    font-family: "Andale Mono Regular", Arial, sans-serif;
+    font-size: 14px;
+    width: 100px;
+    padding: 2px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input#name {
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: var(--graph_width);
+    text-align: center;
+}
+
+input#name:hover, input#name:focus {
+    border: 1px solid black;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus::placeholder {
+    color: transparent;
 }
