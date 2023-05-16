@@ -42,7 +42,8 @@ function makeGraph() {
         y: ppv_y,
         name: "Test (+)",
         line: {
-            color: "rgb(87, 188, 144)"
+            color: "rgb(87, 188, 144)",
+            shape: "spline"
         }
     };
     
@@ -51,7 +52,8 @@ function makeGraph() {
         y: npv_y,
         name: "Test (-)",
         line: {
-            color: "rgb(1, 82, 73)"
+            color: "rgb(1, 82, 73)",
+            shape: "spline"
         }
     };
     
