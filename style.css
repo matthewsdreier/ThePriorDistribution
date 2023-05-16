@@ -1,0 +1,47 @@
+
+:root {
+    --light_green: rgb(87, 188, 144);
+    --dark_green: rgb(1, 82, 73);
+    --blue: rgb(119, 201, 212);
+}
+
+@font-face {
+    font-family: "Andale Mono Regular";
+    src: local("Andale Mono Regular"), url("./assets/andalemo.ttf");
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+}
+
+header, footer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+}
+
+header img, footer img {
+    width: 50px;
+}
+
+header a.logo {
+    display: flex;
+    gap: 10px;
+    margin: 0 auto 0 0;
+}
+
+footer a.logo {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark_green);
+    font-family: "Andale Mono Regular";
+}
