@@ -59,16 +59,19 @@ function makeGraph() {
         xaxis: {
             title: {
                 text: "Pre-Test Probability"
-            }
+            },
+            range: [-5, 105]
         },
         yaxis: {
             title: {
                 text: "Post-Test Probability"
-            }
+            },
+            range: [-5, 105]
         },
         margin: { 
             t: 20,
-            b: 45
+            b: 50,
+            pad: 4
         }
     }
 
