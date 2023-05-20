@@ -67,6 +67,15 @@ a {
     width: 100%;
 }
 
+.learn {
+    width: var(--graph_width);
+    align-self: center;
+}
+
+.learn h3, .learn h2 {
+    text-align: center;
+}
+
 .graph {
     width: var(--graph_width);
 }
