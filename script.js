@@ -1,30 +1,4 @@
-const graph = document.querySelector(".graph");
-const sn_input = document.querySelector("#sensitivity");
-const sp_input = document.querySelector("#specificity");
-var specificity = 80;
-var sensitivity = 80;
-
-sp_input.addEventListener("blur", function() {
-    if (!this.value) {
-        specificity = 80;
-    } else {
-        specificity = Number(this.value);
-    }
-    makeGraph(sn = sensitivity, sp = specificity);
-})
-
-sn_input.addEventListener("blur", function() {
-    if (!this.value) {
-        sensitivity = 80;
-    } else {
-        sensitivity = Number(this.value);
-    }
-    makeGraph(sn = sensitivity, sp = specificity);
-})
-
-makeGraph(sn = sensitivity, sp = specificity);
-
-function makeGraph(sn, sp) {
+function makeGraph(box, sn, sp) {
     var ppv_x = [];
     var npv_x = [];
     var ppv_y = [];
@@ -83,6 +57,6 @@ function makeGraph(sn, sp) {
 
     var data = [ppv, npv];
     
-    Plotly.newPlot(graph, data, layout, config);
+    Plotly.newPlot(box, data, layout, config);
 }
 
