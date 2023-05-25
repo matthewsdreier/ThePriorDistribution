@@ -67,17 +67,27 @@ a {
     width: 100%;
 }
 
-.learn, .about {
+.learn, .about, .graph {
     width: var(--graph_width);
     align-self: center;
 }
 
-.learn h3, .learn h2 {
-    text-align: center;
+.learn, .about {
+    font-size: 14px;
 }
 
-.graph {
-    width: var(--graph_width);
+h2 {
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+h3 {
+    text-align: center;
+    margin: 30px 0 10px 0;
+}
+
+.learn div {
+    margin: 0 0 25px 0;
 }
 
 .parameters {
