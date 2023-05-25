@@ -67,7 +67,7 @@ a {
     width: 100%;
 }
 
-.learn {
+.learn, .about {
     width: var(--graph_width);
     align-self: center;
 }
