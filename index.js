@@ -4,7 +4,7 @@ const sp_input = document.querySelector("#specificity");
 var specificity = 80;
 var sensitivity = 80;
 
-sp_input.addEventListener("blur", function() {
+sp_input.addEventListener("change", function() {
     if (!this.value) {
         specificity = 80;
     } else {
@@ -13,7 +13,7 @@ sp_input.addEventListener("blur", function() {
     makeGraph(box = graph, sn = sensitivity, sp = specificity);
 })
 
-sn_input.addEventListener("blur", function() {
+sn_input.addEventListener("change", function() {
     if (!this.value) {
         sensitivity = 80;
     } else {
