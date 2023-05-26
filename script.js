@@ -18,7 +18,8 @@ function makeGraph(box, sn, sp) {
         line: {
             color: "rgb(87, 188, 144)",
             shape: "line"
-        }
+        },
+        hovertemplate: 'Pretest Probability: %{x}%<br>Posttest Probability: %{y}%'
     };
     
     var npv = {
@@ -28,7 +29,8 @@ function makeGraph(box, sn, sp) {
         line: {
             color: "rgb(1, 82, 73)",
             shape: "line"
-        }
+        },
+        hovertemplate: 'Pretest Probability: %{x}%<br>Posttest Probability: %{y}%'
     };
     
     var layout = {
