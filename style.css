@@ -131,3 +131,7 @@ input:focus {
 input:focus::placeholder {
     color: transparent;
 }
+
+input:invalid {
+    border-color: red;
+}
