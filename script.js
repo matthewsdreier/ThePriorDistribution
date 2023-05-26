@@ -7,8 +7,8 @@ function makeGraph(box, sn, sp) {
     for (let i = 0; i <= 100; i++) {
         ppv_x.push(i);
         npv_x.push(i);
-        ppv_y.push((100 * (sn * i) / (sn * i + (100 - sp) * (100 - i))));
-        npv_y.push(100 * (1 - (sp * (100 - i)) / (sp * (100 - i) + (100 - sn) * i)));
+        ppv_y.push((100 * (sn * i) / (sn * i + (100 - sp) * (100 - i))).toFixed(2));
+        npv_y.push((100 * (1 - (sp * (100 - i)) / (sp * (100 - i) + (100 - sn) * i))).toFixed(2));
     }
     
     var ppv = {
