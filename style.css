@@ -90,10 +90,22 @@ h3 {
     margin: 0 0 25px 0;
 }
 
+.snsp, .lr {
+    width: var(--graph_width);
+    display: flex;
+    justify-content: space-evenly; 
+}
+
 .parameters {
     width: var(--graph_width);
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.gray, .gray input {
+    color: lightgray;
+    border-color: lightgray;
 }
 
 label {
@@ -126,6 +138,10 @@ input#name:hover, input#name:focus {
 
 input:focus {
     outline: none;
+}
+
+input::placeholder {
+    color: gray;
 }
 
 input:focus::placeholder {

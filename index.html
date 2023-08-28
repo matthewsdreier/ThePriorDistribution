@@ -21,13 +21,25 @@
     <div class="main">
         <input type="text" id="name" placeholder="Test Name">
         <div class="parameters">
-            <div class="sensitivity">
-                <label for="sensitivity">Sensitivity</label>
-                <input type="number" step="any" min="0.001" max="99.999" id="sensitivity" placeholder="80">
+            <div class="snsp">
+                <div class="sensitivity">
+                    <label for="sensitivity">Sensitivity</label>
+                    <input type="number" step="any" min="0.001" max="99.999" id="sensitivity" placeholder="80">
+                </div>
+                <div class="specificity">
+                    <label for="specificity">Specificity</label>
+                    <input type="number" step="any" id="specificity" min="0.001" max="99.999" placeholder="80">
+                </div>
             </div>
-            <div class="specificity">
-                <label for="specificity">Specificity</label>
-                <input type="number" step="any" id="specificity" min="0.001" max="99.999" placeholder="80">
+            <div class="lr">
+                <div class="LR-">
+                    <label for="lrn">Negative LR</label>
+                    <input type="number" step="any" min="0.001" id="lrn" placeholder="0.25">
+                </div>
+                <div class="LR+">
+                    <label for="lrp">Positive LR</label>
+                    <input type="number" step="any" id="lrp" min="0.001" placeholder="4">
+                </div>
             </div>
         </div>
         <div class="graph">
