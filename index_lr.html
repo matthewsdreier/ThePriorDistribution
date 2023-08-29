@@ -21,17 +21,17 @@
     <div class="main">
         <input type="text" id="name" placeholder="Test Name">
         <div class="parameters">
-            <div class="sensitivity">
-                <label for="sensitivity">Sensitivity</label>
-                <input type="number" step="any" min="0.001" max="99.999" id="sensitivity" placeholder="80">
+            <div class="lrn">
+                <label for="lrn">Negative LR</label>
+                <input type="number" step="any" min="0.001" id="lrn" placeholder="0.25">
             </div>
-            <div class="specificity">
-                <label for="specificity">Specificity</label>
-                <input type="number" step="any" id="specificity" min="0.001" max="99.999" placeholder="80">
+            <div class="lrp">
+                <label for="lrp">Positive LR</label>
+                <input type="number" step="any" id="lrp" min="0.001" placeholder="4">
             </div>
         </div>
-        <a href="./index_lr.html" class="switch">
-            Switch to likelihood ratios
+        <a href="./index.html" class="switch">
+            Switch to sensitivity and specificity
         </a>
         <div class="graph">
         </div>
@@ -48,6 +48,6 @@
 
 <script src="https://cdn.plot.ly/plotly-2.20.0.min.js"></script>
 <script src="./script.js"></script>
-<script src="./index.js"></script>
+<script src="./index_lr.js"></script>
 
 </html>
