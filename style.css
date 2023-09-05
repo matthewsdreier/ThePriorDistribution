@@ -59,6 +59,18 @@ a {
     font-family: "Andale Mono Regular", Arial, sans-serif;
 }
 
+sup {
+    line-height: 0;
+}
+
+div {
+    line-height: 1.25;
+}
+
+.about li {
+    margin: 10px 0;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -80,6 +92,11 @@ a {
 .about ol {
     list-style-position: inside;
     padding-left: 0;
+}
+
+.instruction {
+    font-family: "Andale Mono Regular", Arial, sans-serif;
+    font-size: 1.1rem;
 }
 
 h2 {
