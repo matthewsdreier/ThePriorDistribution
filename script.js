@@ -54,11 +54,17 @@ function makeGraph(box, sn, sp) {
     }
 
     var config = {
-        modeBarButtonsToRemove: ["zoom2d", "pan2d", "zoomIn2d", "zoomOut2d", "autoscale"]
+        modeBarButtonsToRemove: ["zoom2d", "pan2d", "zoomIn2d", "zoomOut2d", "autoscale"],
+        toImageButtonOptions: {
+            format: 'png',
+            filename: 'leaf_plot',
+            height: 600,
+            width: 900,
+            scale: 10
+          }
     }
 
     var data = [ppv, npv];
     
     Plotly.newPlot(box, data, layout, config);
 }
-
