@@ -20,7 +20,6 @@
 
     .instruction, .convert {
         font-size: 0.85rem;
-        text-align: center;
     }
 
     .sensitivity, .specificity, .lrn, .lrp {
@@ -147,6 +146,7 @@ div {
 
 .instruction {
     font-family: "Andale Mono Regular", Arial, sans-serif;
+    text-align: center;
 }
 
 h2 {
