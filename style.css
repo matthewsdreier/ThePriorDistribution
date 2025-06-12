@@ -3,7 +3,59 @@
     --light_green: rgb(87, 188, 144);
     --dark_green: rgb(1, 82, 73);
     --blue: rgb(119, 201, 212);
-    --graph_width: 750px;
+}
+
+@media (width < 750px) {
+    .learn, .about, .graph, .instruction, .parameters, .convert, input#name {
+        width: 95%;
+    }
+
+    .title {
+        display: none;
+    }
+
+    header, footer {
+        min-width: 200px;
+    }
+
+    .instruction, .convert {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .sensitivity, .specificity, .lrn, .lrp {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+
+    label {
+        display: block;
+        text-align: center;
+        font-size: 0.85em;
+        margin-left: 8px;
+    }
+
+    input {
+        text-align: center;
+    }
+}
+
+@media (width >= 750px) {
+    .learn, .about, .graph, .instruction, .parameters, .convert, input#name {
+        width: 750px;
+    }
+
+    header, footer {
+        min-width: 500px;
+    }
+    
+    .instruction {
+        font-size: 1.1rem;
+    }
+
 }
 
 @font-face {
@@ -22,10 +74,9 @@ body {
 
 header, footer {
     display: flex;
-    justify-content: right;
+    justify-content: start;
     align-items: center;
     gap: 20px;
-    min-width: 500px;
 }
 
 header {
@@ -81,7 +132,7 @@ div {
 }
 
 .learn, .about, .graph {
-    width: var(--graph_width);
+    /*width: var(--graph_width);*/
     align-self: center;
 }
 
@@ -96,7 +147,6 @@ div {
 
 .instruction {
     font-family: "Andale Mono Regular", Arial, sans-serif;
-    font-size: 1.1rem;
 }
 
 h2 {
@@ -118,13 +168,13 @@ h3 {
 }
 
 .parameters {
-    width: var(--graph_width);
+    /*width: var(--graph_width);*/
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
 }
 
 .convert {
-    width: var(--graph_width);
+    /*width: var(--graph_width);*/
     display: flex;
     justify-content: space-evenly;
 }
@@ -159,7 +209,7 @@ input#name {
     font-size: 18px;
     border: 1px solid white;
     border-radius: 5px;
-    width: var(--graph_width);
+    /*width: var(--graph_width);*/
     text-align: center;
 }
 
