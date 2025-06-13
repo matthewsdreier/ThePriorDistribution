@@ -32,29 +32,13 @@ function makeGraph(box, sn, sp) {
         },
         hovertemplate: 'Pretest Probability: %{x:.1f}%<br>Posttest Probability: %{y:.1f}%'
     };
-    
-    var layout = {
-        xaxis: {
-            title: {
-                text: "Pre-Test Probability"
-            },
-            range: [-5, 105]
-        },
-        yaxis: {
-            title: {
-                text: "Post-Test Probability"
-            },
-            range: [-5, 105]
-        },
-        margin: { 
-            t: 20,
-            b: 50,
-            pad: 4
-        }
-    }
 
-    var config = {
-        modeBarButtonsToRemove: ["zoom2d", "pan2d", "zoomIn2d", "zoomOut2d", "autoscale"],
+    var data = [ppv, npv];
+    
+    if (window.innerWidth < 750) {
+
+        var config = {
+        displayModeBar: false,
         toImageButtonOptions: {
             format: 'png',
             filename: 'leaf_plot',
@@ -62,9 +46,69 @@ function makeGraph(box, sn, sp) {
             width: 900,
             scale: 10
           }
-    }
+        }
+        
+        var layout = {
+            xaxis: {
+                title: {
+                    text: "Pre-Test Probability"
+                },
+                range: [-5, 105]
+            },
+            yaxis: {
+                title: {
+                    text: "Post-Test Probability"
+                },
+                range: [-5, 105]
+            },
+            margin: { 
+                t: 20,
+                b: 50,
+                l: 5,
+                r: 5,
+                pad: 4
+            },
+            legend: {
+                x: 0.5,
+                xanchor: "center",
+                y: -0.2,
+                "orientation": "h"
+            }
+        }
 
-    var data = [ppv, npv];
-    
-    Plotly.newPlot(box, data, layout, config);
+        Plotly.newPlot(box, data, layout, config, {staticPlot: true}, {displayModeBar: false});
+    } else {
+        var config = {
+            modeBarButtonsToRemove: ["zoom2d", "pan2d", "zoomIn2d", "zoomOut2d", "autoscale"],
+            toImageButtonOptions: {
+                format: 'png',
+                filename: 'leaf_plot',
+                height: 600,
+                width: 900,
+                scale: 10
+            }
+        }
+
+        var layout = {
+            xaxis: {
+                title: {
+                    text: "Pre-Test Probability"
+                },
+                range: [-5, 105]
+            },
+            yaxis: {
+                title: {
+                    text: "Post-Test Probability"
+                },
+                range: [-5, 105]
+            },
+            margin: { 
+                t: 20,
+                b: 50,
+                pad: 4
+            }
+        }
+
+        Plotly.newPlot(box, data, layout, config);
+    }
 }
