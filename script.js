@@ -64,8 +64,8 @@ function makeGraph(box, sn, sp) {
             },
             margin: { 
                 t: 20,
-                b: 50,
-                l: 10,
+                b: 30,
+                l: 45,
                 r: 5,
                 pad: 4
             },

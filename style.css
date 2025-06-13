@@ -45,6 +45,10 @@
     body {
         gap: 10px;
     }
+
+    .switch {
+        text-align: center;
+    }
 }
 
 @media (width >= 750px) {
