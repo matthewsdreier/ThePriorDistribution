@@ -39,6 +39,7 @@ function makeGraph(box, sn, sp) {
 
         var config = {
         displayModeBar: false,
+        staticPlot: true,
         toImageButtonOptions: {
             format: 'png',
             filename: 'leaf_plot',
@@ -76,7 +77,7 @@ function makeGraph(box, sn, sp) {
             }
         }
 
-        Plotly.newPlot(box, data, layout, config, {staticPlot: true}, {displayModeBar: false});
+        Plotly.newPlot(box, data, layout, config);
     } else {
         var config = {
             modeBarButtonsToRemove: ["zoom2d", "pan2d", "zoomIn2d", "zoomOut2d", "autoscale"],

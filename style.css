@@ -6,7 +6,7 @@
 }
 
 @media (width < 750px) {
-    .learn, .about, .graph, .instruction, .parameters, .convert, input#name {
+    .learn, .about, .graph, .instruction, .parameters, .switch, input#name {
         width: 95%;
     }
 
@@ -18,8 +18,8 @@
         min-width: 200px;
     }
 
-    .instruction, .convert {
-        font-size: 0.85rem;
+    .instruction, .switch {
+        font-size: 16px;
     }
 
     .sensitivity, .specificity, .lrn, .lrp {
@@ -33,17 +33,18 @@
     label {
         display: block;
         text-align: center;
-        font-size: 0.85em;
+        font-size: 16px;
         margin-left: 8px;
     }
 
     input {
         text-align: center;
+        font-size: 16px;
     }
 }
 
 @media (width >= 750px) {
-    .learn, .about, .graph, .instruction, .parameters, .convert, input#name {
+    .learn, .about, .graph, .instruction, .parameters, .switch, input#name {
         width: 750px;
     }
 
@@ -53,6 +54,14 @@
     
     .instruction {
         font-size: 1.1rem;
+    }
+
+    .switch {
+        font-size: 0.8rem;
+    }
+
+    input {
+        font-size: 14px;
     }
 
 }
@@ -173,15 +182,10 @@ h3 {
     justify-content: space-evenly;
 }
 
-.convert {
-    /*width: var(--graph_width);*/
+.switch {
     display: flex;
     justify-content: space-evenly;
-}
-
-.switch {
     margin: 0 0 -5px 0;
-    font-size: 0.8rem;
 }
 
 .gray, .gray input {
@@ -191,14 +195,12 @@ h3 {
 
 label {
     font-family: "Andale Mono Regular", Arial, sans-serif;
-    font-size: 14px;
     letter-spacing: -0.5px;
     margin-right: 8px;
 }
 
 input {
     font-family: "Andale Mono Regular", Arial, sans-serif;
-    font-size: 14px;
     width: 100px;
     padding: 2px 5px;
     border: 1px solid black;
